@@ -1,0 +1,79 @@
+@import '../../assets/style/variables';
+@import '../../assets/style/mixins';
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 39px;
+
+    @include max-breakpoint($mobile) {
+        margin-top: 20px;
+        flex-direction: column;
+        justify-content: center;
+        justify-content: center;
+        gap: 20px
+    }
+
+    .name {
+        @include typography(32px, 32px, -0.45px, 700);
+
+        @include max-breakpoint($mobile) {
+            @include typography(24px, 32px, -0.33px, 700);
+        }
+    }
+
+    .media-social {
+        display: flex;
+        gap: 32px;
+        margin-right: 29px;
+
+        @include max-breakpoint($mobile) {
+            gap: 25.5px;
+            margin-right: 0px;
+        }
+
+        li {
+            list-style: none;
+            height: 24px;
+            width: 24px;
+
+            @include max-breakpoint($mobile) {
+                width: 20px;
+                height: 20px;
+            }
+
+            a {
+                .media {
+                    mask-size: cover;
+                    mask-repeat: no-repeat;
+                    background-color: $color-white;
+                    width: 100%;
+                    height: 100%;
+                }
+
+                :hover {
+                    background-color: $color-green;
+                }
+
+                .github {
+                    mask-image: url('../../assets/images/icon-github.svg');
+                }
+
+                .frontendmentor {
+                    mask-image: url('../../assets/images/icon-frontend-mentor.svg');
+                }
+
+                .linkedin {
+                    mask-image: url('../../assets/images/icon-linkedin.svg');
+                }
+
+                .twitter {
+                    mask-image: url('../../assets/images/icon-twitter.svg');
+                }
+
+            }
+        }
+
+    }
+}
