@@ -1,0 +1,114 @@
+@import '../assets/style/_variables.scss';
+@import '../assets/style/_mixins.scss';
+
+@mixin rings($top: null, $right: null, $left: null, $bottom: null) {
+  position: absolute;
+  z-index: 1;
+
+  @if $top !=null {
+    top: $top;
+  }
+
+  @if $right !=null {
+    right: $right;
+  }
+
+  @if $left !=null {
+    left: $left;
+  }
+
+  @if $bottom !=null {
+    bottom: $bottom;
+  }
+}
+
+.app {
+  background-color: $color-black;
+  color: $color-white;
+  font-family: "Space Grotesk", sans-serif;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  height: 3872px;
+
+  .ring1 {
+    @include rings(133px, null, -100px, null);
+
+    @include max-breakpoint($tablet) {
+      @include rings(86px, null, -265px, null);
+    }
+
+    @include max-breakpoint($mobile) {
+      @include rings(124px, null, -342px, null);
+    }
+  }
+
+  .ring2 {
+    @include rings(1077px, -239px, null, null);
+
+    @include max-breakpoint($tablet) {
+      @include rings(1077px, -332px, null, null);
+    }
+
+    @include max-breakpoint($mobile) {
+      @include rings(1287px, -358px, null, null);
+    }
+  }
+
+  .ring3 {
+    @include rings(null, null, -205px, 219px);
+
+    @include max-breakpoint($tablet) {
+      @include rings(null, null, -368px, 130px);
+    }
+
+    @include max-breakpoint($mobile) {
+      @include rings(null, null, -359px, 269px);
+    }
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    width: 1110px;
+    z-index: 5;
+
+    @include max-breakpoint($desktop) {
+      width: 1000px;
+    }
+
+    @include max-breakpoint($tablet) {
+      width: 710px;
+    }
+
+    @include max-breakpoint($mobile) {
+      width: 344px;
+      position: initial;
+      overflow: visible;
+    }
+
+    @include max-breakpoint($small-mobile) {
+      width: 280px;
+    }
+
+    .circle {
+      position: absolute;
+      right: 380px;
+      top: 521px;
+      z-index: 10;
+
+      @include max-breakpoint($tablet) {
+        top: 471px;
+        right: -63.5px;
+      }
+
+      @include max-breakpoint($mobile) {
+        top: 254px;
+        right: -65px;
+      }
+    }
+  }
+}
