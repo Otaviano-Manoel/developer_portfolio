@@ -7,6 +7,7 @@ import ring from '../assets/images/pattern-rings.svg';
 import circle from '../assets/images/pattern-circle.svg';
 import classNames from 'classnames';
 import Nav from '../component/nav/Nav';
+import Hero from '../component/hero/hero';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <div data-testid='container-page' className={styled['container']}>
         <img className={styled['circle']} src={circle} alt="Circle" />
         <Nav />
+        <Hero />
       </div>
     </div>
   );

@@ -1,0 +1,125 @@
+@import '../../assets/style/variables';
+@import '../../assets/style/mixins';
+
+.header {
+    height: 753px;
+
+    @include max-breakpoint($tablet) {
+        height: 599px;
+    }
+
+    @include max-breakpoint($mobile) {
+        height: 655px;
+    }
+
+    .about-me {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        margin-top: 127px;
+        z-index: 4;
+
+        @include max-breakpoint($tablet) {
+            margin-top: 90px;
+        }
+
+        @include max-breakpoint($mobile) {
+            text-align: center;
+            align-items: center;
+            margin-top: 331px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .presentation {
+            @include typography(88px, 88px, -2.5px, 700);
+
+            @include max-breakpoint($desktop) {
+                font-size: 78px;
+            }
+
+            @include max-breakpoint($tablet) {
+                width: 445px;
+                @include typography(72px, 72px, -2.05px, 700);
+            }
+
+            @include max-breakpoint($mobile) {
+                @include typography(40px, 40px, -1.15px, 700);
+            }
+
+            @include max-breakpoint($small-mobile) {
+                font-size: 32px;
+            }
+
+            .name {
+                display: block;
+
+                @include max-breakpoint($tablet) {
+                    display: initial;
+                }
+
+                @include max-breakpoint($mobile) {
+                    display: block;
+                }
+
+                .underline {
+                    text-decoration: underline solid $color-green 6px;
+
+                    @include max-breakpoint($mobile) {
+                        text-decoration-thickness: 4px;
+                    }
+                }
+            }
+        }
+
+        .description {
+            @include typography(18px, 28px, null, 500);
+            margin-top: 43px;
+            margin-bottom: 66px;
+            width: 445px;
+
+            @include max-breakpoint($tablet) {
+                margin-top: 60px;
+                margin-bottom: 34px;
+                width: 410px;
+            }
+
+            @include max-breakpoint($mobile) {
+                margin: 24px 0px;
+                width: 343px;
+                @include typography(16px, 26px, null, 500);
+            }
+
+            @include max-breakpoint($small-mobile) {
+                margin: 24px 0px;
+                width: 275px;
+                font-size: 14px;
+            }
+        }
+    }
+
+    .img {
+        width: 445px;
+        height: 720px;
+        right: 0;
+        top: 0;
+        position: absolute;
+        background-image: url('../../assets/images/image-profile-desktop.webp');
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        @include max-breakpoint($tablet) {
+            background-image: url('../../assets/images/image-profile-tablet.webp');
+            width: 322px;
+            height: 600px;
+        }
+
+        @include max-breakpoint($mobile) {
+            background-image: url('../../assets/images/image-profile-mobile.webp');
+            width: 174px;
+            height: 383px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}

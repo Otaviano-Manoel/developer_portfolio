@@ -1,0 +1,17 @@
+@import '../../assets/style/variables';
+@import '../../assets/style/mixins';
+
+.link {
+    color: $color-white;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    @include typography(16px, 26px, 2.30px, 700);
+    width: 120px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid $color-green;
+}
+
+.link:hover {
+    color: $color-green;
+}

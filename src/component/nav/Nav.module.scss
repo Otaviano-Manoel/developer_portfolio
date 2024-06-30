@@ -6,6 +6,7 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 39px;
+    z-index: 3;
 
     @include max-breakpoint($mobile) {
         margin-top: 20px;
