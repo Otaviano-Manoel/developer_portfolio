@@ -1,0 +1,61 @@
+@import '../../assets/style/variables';
+@import '../../assets/style/mixins';
+
+.technology {
+    display: grid;
+    justify-content: center;
+    border-top: 1px solid $color-white;
+    padding-top: 72px;
+    grid-template-columns: repeat(3, 345px);
+    column-gap: 30px;
+    row-gap: 58px;
+
+    @include max-breakpoint($desktop) {
+        padding-left: 5px;
+        justify-content: flex-start;
+    }
+
+    @include max-breakpoint($tablet) {
+        grid-template-columns: repeat(2, 50%);
+        padding-top: 52px;
+        column-gap: 7px;
+        row-gap: 52px;
+    }
+
+    @include max-breakpoint($mobile) {
+        grid-template-columns: repeat(1, 100%);
+        padding-top: 40px;
+        text-align: center;
+        column-gap: 0px;
+        row-gap: 24px;
+    }
+
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        @include max-breakpoint($mobile) {
+            gap: 1px;
+        }
+
+        .name {
+            @include typography(48px, 56px, -1.5px, 700);
+
+            @include max-breakpoint($mobile) {
+                @include typography(32px, 40px, -1px, 700);
+            }
+        }
+
+        .experience {
+            @include typography(18px, 28px, null, 500);
+            text-transform: capitalize;
+            color: $color-grey;
+
+            @include max-breakpoint($mobile) {
+                @include typography(16px, 26px, null, 500);
+            }
+        }
+    }
+}
