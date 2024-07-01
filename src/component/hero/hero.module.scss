@@ -2,14 +2,16 @@
 @import '../../assets/style/mixins';
 
 .header {
+    background-color: green;
+    position: relative;
     height: 753px;
 
     @include max-breakpoint($tablet) {
-        height: 599px;
+        height: 660px;
     }
 
     @include max-breakpoint($mobile) {
-        height: 655px;
+        height: 747px;
     }
 
     .about-me {
@@ -26,7 +28,7 @@
         @include max-breakpoint($mobile) {
             text-align: center;
             align-items: center;
-            margin-top: 331px;
+            margin-top: 423px;
             left: 50%;
             transform: translateX(-50%);
         }

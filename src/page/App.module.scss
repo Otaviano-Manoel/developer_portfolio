@@ -30,7 +30,7 @@
   justify-content: center;
   position: relative;
   overflow: hidden;
-  height: 3872px;
+  height: fit-content;
 
   .ring1 {
     @include rings(133px, null, -100px, null);

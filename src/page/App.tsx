@@ -9,6 +9,7 @@ import classNames from 'classnames';
 import Nav from '../component/nav/Nav';
 import Hero from '../component/hero/hero';
 import Technology from '../component/technology/technology';
+import Projects from '../component/projects/projects';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Nav />
         <Hero />
         <Technology />
+        <Projects />
       </div>
     </div>
   );
