@@ -2,7 +2,6 @@
 @import '../../assets/style/mixins';
 
 .header {
-    position: relative;
     height: 753px;
 
     @include max-breakpoint($tablet) {
@@ -118,6 +117,7 @@
 
         @include max-breakpoint($mobile) {
             background-image: url('../../assets/images/image-profile-mobile.webp');
+            position: relative;
             width: 174px;
             height: 383px;
             left: 50%;

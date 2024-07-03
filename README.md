@@ -22,7 +22,7 @@ Challenge website: [Single-page developer portfolio](https://www.frontendmentor.
 
 ### Screenshot
 
-<img src="./src/assets/images/desktop screenshot.png" alt="Screenshot of the computer project" width="300" height="500">
+<img src="./src/assets/images/desktop screenshot.png" alt="Screenshot of the computer project" width="400" height="900">
 
 ### Links
 
