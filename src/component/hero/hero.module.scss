@@ -2,7 +2,6 @@
 @import '../../assets/style/mixins';
 
 .header {
-    background-color: green;
     position: relative;
     height: 753px;
 
@@ -109,6 +108,7 @@
         background-image: url('../../assets/images/image-profile-desktop.webp');
         background-repeat: no-repeat;
         background-size: cover;
+
 
         @include max-breakpoint($tablet) {
             background-image: url('../../assets/images/image-profile-tablet.webp');

@@ -28,6 +28,8 @@
   font-family: "Space Grotesk", sans-serif;
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
   position: relative;
   overflow: hidden;
   height: fit-content;

@@ -10,7 +10,9 @@ function Hero() {
                 <p data-testid='description' className={styled['description']}>Based in the UK, I’m a front-end developer passionate about building accessible web apps that users love.</p>
                 <Link data-testid='contact' text='Contact me' url='' />
             </div>
-            <div data-testid='image' className={styled['img']}></div>
+            <div data-testid='image' className={styled['img']}>
+                <div className={styled['ad']}></div>
+            </div>
         </header>
     );
 }

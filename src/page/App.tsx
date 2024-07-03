@@ -10,6 +10,7 @@ import Nav from '../component/nav/Nav';
 import Hero from '../component/hero/hero';
 import Technology from '../component/technology/technology';
 import Projects from '../component/projects/projects';
+import Footer from '../component/footer/footer';
 
 function App() {
   return (
@@ -23,7 +24,9 @@ function App() {
         <Hero />
         <Technology />
         <Projects />
-      </div>
+
+      </div><Footer />
+
     </div>
   );
 }
